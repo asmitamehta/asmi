@@ -1,0 +1,153 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["auth-recover-password-auth-recover-password-module"],{
+
+/***/ "./src/app/auth/recover-password/auth-recover-password.module.ts":
+/*!***********************************************************************!*\
+  !*** ./src/app/auth/recover-password/auth-recover-password.module.ts ***!
+  \***********************************************************************/
+/*! exports provided: authRecoverPasswordRoutes, AuthRecoverPasswordModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "authRecoverPasswordRoutes", function() { return authRecoverPasswordRoutes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthRecoverPasswordModule", function() { return AuthRecoverPasswordModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _components_recover_password_page_auth_recover_password_page_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/recover-password-page/auth-recover-password-page.component */ "./src/app/auth/recover-password/components/recover-password-page/auth-recover-password-page.component.ts");
+/* harmony import */ var _resolvers_auth_recover_password_page_resolver__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./resolvers/auth-recover-password-page.resolver */ "./src/app/auth/recover-password/resolvers/auth-recover-password-page.resolver.ts");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ */ "./src/app/auth/index.ts");
+
+
+
+
+
+
+var authRecoverPasswordRoutes = [
+    {
+        path: '',
+        component: _components_recover_password_page_auth_recover_password_page_component__WEBPACK_IMPORTED_MODULE_3__["AuthRecoverPasswordPageComponent"],
+        resolve: {
+            data: _resolvers_auth_recover_password_page_resolver__WEBPACK_IMPORTED_MODULE_4__["AuthRecoverPasswordPageResolver"]
+        }
+    }
+];
+var AuthRecoverPasswordModule = /** @class */ (function () {
+    function AuthRecoverPasswordModule() {
+    }
+    AuthRecoverPasswordModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: [
+                _components_recover_password_page_auth_recover_password_page_component__WEBPACK_IMPORTED_MODULE_3__["AuthRecoverPasswordPageComponent"]
+            ],
+            imports: [
+                _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(authRecoverPasswordRoutes),
+                ___WEBPACK_IMPORTED_MODULE_5__["AuthSharedModule"]
+            ],
+            providers: [
+                _resolvers_auth_recover_password_page_resolver__WEBPACK_IMPORTED_MODULE_4__["AuthRecoverPasswordPageResolver"]
+            ]
+        })
+    ], AuthRecoverPasswordModule);
+    return AuthRecoverPasswordModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/auth/recover-password/components/recover-password-page/auth-recover-password-page.component.html":
+/*!******************************************************************************************************************!*\
+  !*** ./src/app/auth/recover-password/components/recover-password-page/auth-recover-password-page.component.html ***!
+  \******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"auth-page\">\n  <div class=\"container\">\n    <div class=\"row auth-form-wrapper\">\n      <div class=\"col-12 col-lg-7 col-xl-6\">\n        <h1 class=\"auth-title\">Recover your password</h1>\n        <app-auth-recover-password-form></app-auth-recover-password-form>\n      </div>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/auth/recover-password/components/recover-password-page/auth-recover-password-page.component.ts":
+/*!****************************************************************************************************************!*\
+  !*** ./src/app/auth/recover-password/components/recover-password-page/auth-recover-password-page.component.ts ***!
+  \****************************************************************************************************************/
+/*! exports provided: AuthRecoverPasswordPageComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthRecoverPasswordPageComponent", function() { return AuthRecoverPasswordPageComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var AuthRecoverPasswordPageComponent = /** @class */ (function () {
+    function AuthRecoverPasswordPageComponent() {
+    }
+    AuthRecoverPasswordPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-auth-recover-password-page',
+            template: __webpack_require__(/*! ./auth-recover-password-page.component.html */ "./src/app/auth/recover-password/components/recover-password-page/auth-recover-password-page.component.html"),
+            encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
+            styles: [__webpack_require__(/*! ./styles/auth-recover-password-page.styles.scss */ "./src/app/auth/recover-password/components/recover-password-page/styles/auth-recover-password-page.styles.scss")]
+        })
+    ], AuthRecoverPasswordPageComponent);
+    return AuthRecoverPasswordPageComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/auth/recover-password/components/recover-password-page/styles/auth-recover-password-page.styles.scss":
+/*!**********************************************************************************************************************!*\
+  !*** ./src/app/auth/recover-password/components/recover-password-page/styles/auth-recover-password-page.styles.scss ***!
+  \**********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".auth-page {\n  min-height: calc(100vh - 3.5rem);\n  padding-bottom: 6rem;\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-image: url(\"/assets/imgs/home/cta-bg.png\"); }\n  @media (min-width: 1200px) {\n    .auth-page {\n      background-position: left 58.33vw top 0px; } }\n  @media (min-width: 992px) and (max-width: 1199.98px) {\n    .auth-page {\n      background-position: left 66.66vw top 0px; } }\n  @media (max-width: 991.98px) {\n    .auth-page {\n      background: none; } }\n  .auth-modal .auth-form-wrapper .auth-title {\n  padding: 0;\n  margin: 0;\n  font-size: 1.4rem; }\n  .auth-modal .modal-header {\n  align-items: center; }\n  .auth-modal .modal-header .close {\n    font-size: 1.8rem; }\n  .auth-form-wrapper .auth-title {\n  padding-top: 2rem;\n  margin-bottom: 2rem;\n  color: #1e1e1e;\n  font-size: 1.8rem;\n  font-weight: 900;\n  letter-spacing: 0.25rem; }\n  .auth-form-wrapper .auth-alt-options {\n  display: flex;\n  justify-content: space-between;\n  flex-direction: row-reverse; }\n  .auth-form-wrapper .auth-alt-options .secondary-call-to-action-btn {\n    color: #9013fe;\n    font-size: 1rem;\n    font-weight: 500;\n    letter-spacing: 0.1rem;\n    transition: color .5s; }\n  .auth-form-wrapper .auth-alt-options .secondary-call-to-action-btn:hover:not([disabled]), .auth-form-wrapper .auth-alt-options .secondary-call-to-action-btn:active:not([disabled]), .auth-form-wrapper .auth-alt-options .secondary-call-to-action-btn.active:not([disabled]), .auth-form-wrapper .auth-alt-options .secondary-call-to-action-btn:focus:not([disabled]), .auth-form-wrapper .auth-alt-options .secondary-call-to-action-btn.focus:not([disabled]) {\n      color: #7601dd; }\n  .auth-form-wrapper .auth-alt-options .secondary-call-to-action-btn[disabled] {\n      cursor: not-allowed;\n      opacity: .5; }\n  @media (max-width: 575.98px) {\n    .auth-form-wrapper .auth-alt-options {\n      flex-wrap: wrap; }\n      .auth-form-wrapper .auth-alt-options .secondary-call-to-action-btn {\n        width: 100%;\n        margin-bottom: 1rem; } }\n  .auth-form-wrapper .auth-form-divider {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-top: 2rem;\n  margin-bottom: 2rem; }\n  .auth-form-wrapper .auth-form-divider::before, .auth-form-wrapper .auth-form-divider::after {\n    content: '';\n    background: #9e9e9e;\n    height: 2px;\n    flex: 1 1 auto; }\n  .auth-form-wrapper .auth-form-divider .divider-text {\n    color: #1e1e1e;\n    font-size: 1.2rem;\n    font-weight: 500;\n    letter-spacing: 0.2rem;\n    margin: 0px;\n    padding: 0px 1rem; }\n  .auth-form-wrapper .social-alternative-btn {\n  background-color: #3b5998;\n  color: #FFFFFF;\n  border-style: solid;\n  border-width: 2px;\n  border-color: #3b5998;\n  border-radius: 0px;\n  cursor: pointer;\n  font-size: 1.2rem;\n  font-weight: 600;\n  letter-spacing: 0.12rem;\n  transition: border-color .5s, color .5s, background-color .5s;\n  height: 4rem; }\n  .auth-form-wrapper .social-alternative-btn:hover:not([disabled]) {\n    background-color: rgba(255, 255, 255, 0.7);\n    border-color: rgba(59, 89, 152, 0.7);\n    color: #3b5998;\n    text-decoration: none; }\n  .auth-form-wrapper .social-alternative-btn:active:not([disabled]), .auth-form-wrapper .social-alternative-btn.active:not([disabled]), .auth-form-wrapper .social-alternative-btn:focus:not([disabled]), .auth-form-wrapper .social-alternative-btn.focus:not([disabled]) {\n    background-color: #FFFFFF;\n    border-color: #3b5998;\n    color: #3b5998;\n    text-decoration: none; }\n  .auth-form-wrapper .social-alternative-btn[disabled] {\n    cursor: not-allowed;\n    opacity: .5; }\n  app-auth-recover-password-page {\n  display: block; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXV0aC9yZWNvdmVyLXBhc3N3b3JkL2NvbXBvbmVudHMvcmVjb3Zlci1wYXNzd29yZC1wYWdlL3N0eWxlcy9DOlxcVXNlcnNcXGFzbWl0XFxPbmVEcml2ZVxcRGVza3RvcFxcYW5ndWxhci1zaXRlLXRlbXBsYXRlXFxhbmd1bGFyLXNpdGUtdGVtcGxhdGUtMS4xLjAvc3JjXFxhcHBcXHN0eWxlc1xcY29tbW9uXFxhdXRoXFxhdXRoLXBhZ2VzLnN0eWxlcy5zY3NzIiwic3JjL2FwcC9hdXRoL3JlY292ZXItcGFzc3dvcmQvY29tcG9uZW50cy9yZWNvdmVyLXBhc3N3b3JkLXBhZ2Uvc3R5bGVzL0M6XFxVc2Vyc1xcYXNtaXRcXE9uZURyaXZlXFxEZXNrdG9wXFxhbmd1bGFyLXNpdGUtdGVtcGxhdGVcXGFuZ3VsYXItc2l0ZS10ZW1wbGF0ZS0xLjEuMC9ub2RlX21vZHVsZXNcXGJvb3RzdHJhcFxcc2Nzc1xcbWl4aW5zXFxfYnJlYWtwb2ludHMuc2NzcyIsInNyYy9hcHAvYXV0aC9yZWNvdmVyLXBhc3N3b3JkL2NvbXBvbmVudHMvcmVjb3Zlci1wYXNzd29yZC1wYWdlL3N0eWxlcy9DOlxcVXNlcnNcXGFzbWl0XFxPbmVEcml2ZVxcRGVza3RvcFxcYW5ndWxhci1zaXRlLXRlbXBsYXRlXFxhbmd1bGFyLXNpdGUtdGVtcGxhdGUtMS4xLjAvc3JjXFxhcHBcXHN0eWxlc1xcX3ZhcmlhYmxlcy5zY3NzIiwic3JjL2FwcC9hdXRoL3JlY292ZXItcGFzc3dvcmQvY29tcG9uZW50cy9yZWNvdmVyLXBhc3N3b3JkLXBhZ2Uvc3R5bGVzL0M6XFxVc2Vyc1xcYXNtaXRcXE9uZURyaXZlXFxEZXNrdG9wXFxhbmd1bGFyLXNpdGUtdGVtcGxhdGVcXGFuZ3VsYXItc2l0ZS10ZW1wbGF0ZS0xLjEuMC9zcmNcXGFwcFxcc3R5bGVzXFxfbWl4aW5zLnNjc3MiLCJzcmMvYXBwL2F1dGgvcmVjb3Zlci1wYXNzd29yZC9jb21wb25lbnRzL3JlY292ZXItcGFzc3dvcmQtcGFnZS9zdHlsZXMvQzpcXFVzZXJzXFxhc21pdFxcT25lRHJpdmVcXERlc2t0b3BcXGFuZ3VsYXItc2l0ZS10ZW1wbGF0ZVxcYW5ndWxhci1zaXRlLXRlbXBsYXRlLTEuMS4wL3NyY1xcYXBwXFxhdXRoXFxyZWNvdmVyLXBhc3N3b3JkXFxjb21wb25lbnRzXFxyZWNvdmVyLXBhc3N3b3JkLXBhZ2VcXHN0eWxlc1xcYXV0aC1yZWNvdmVyLXBhc3N3b3JkLXBhZ2Uuc3R5bGVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDRSxpQ0FBNkM7RUFDN0MscUJBQW9CO0VBRXBCLHVCQUFzQjtFQUN0Qiw2QkFBNEI7RUFDNUIsc0RBQXFELEVBZXREO0VDcUNHO0lEMURKO01BVUksMENBQXlDLEVBVzVDLEVBQUE7RUN1Rkc7SUQ1R0o7TUFlSSwwQ0FBeUMsRUFNNUMsRUFBQTtFQ2tERztJRHZFSjtNQW1CSSxpQkFBZ0IsRUFFbkIsRUFBQTtFQUVEO0VBR00sV0FBVTtFQUNWLFVBQVM7RUFDVCxrQkFBaUIsRUFDbEI7RUFOTDtFQVVJLG9CQUFtQixFQUtwQjtFQWZIO0lBYU0sa0JBQWlCLEVBQ2xCO0VBSUw7RUFFSSxrQkFBaUI7RUFDakIsb0JBQW1CO0VBQ25CLGVFOUNXO0VGK0NYLGtCQUFpQjtFQUNqQixpQkFBZ0I7RUFDaEIsd0JBQXVCLEVBQ3hCO0VBUkg7RUFXSSxjQUFhO0VBQ2IsK0JBQThCO0VBQzlCLDRCQUEyQixFQWM1QjtFQTNCSDtJRzFDRSxlRFFjO0lDUGQsZ0JBQWU7SUFDZixpQkFBZ0I7SUFDaEIsdUJBQXNCO0lBQ3RCLHNCQUFxQixFSHVEbEI7RUFqQkw7TUc5Qk0sZUFic0QsRUFjdkQ7RUg2Qkw7TUd6Qkksb0JBQW1CO01BQ25CLFlBQVcsRUFDWjtFRnFEQztJRDlCSjtNQW9CTSxnQkFBZSxFQU9sQjtNQTNCSDtRQXVCUSxZQUFXO1FBQ1gsb0JBQW1CLEVBQ3BCLEVBQUE7RUF6QlA7RUE4QkksY0FBYTtFQUNiLG9CQUFtQjtFQUNuQix3QkFBdUI7RUFDdkIsaUJBQWdCO0VBQ2hCLG9CQUFtQixFQW1CcEI7RUFyREg7SUF1Q00sWUFBVztJQUNYLG9CRS9FUTtJRmdGUixZQUFXO0lBQ1gsZUFBYyxFQUNmO0VBM0NMO0lBOENNLGVFeEZTO0lGeUZULGtCQUFpQjtJQUNqQixpQkFBZ0I7SUFDaEIsdUJBQXNCO0lBQ3RCLFlBQVc7SUFDWCxrQkFBaUIsRUFDbEI7RUFwREw7RUduQkUsMEJEWHFCO0VDWXJCLGVEdEJhO0VDdUJiLG9CQUFtQjtFQUNuQixrQkFBaUI7RUFDakIsc0JEZnFCO0VDZ0JyQixtQkFBa0I7RUFDbEIsZ0JBQWU7RUFDZixrQkFBaUI7RUFDakIsaUJBQWdCO0VBQ2hCLHdCQUF1QjtFQUN2Qiw4REFBNkQ7RUhrRTNELGFBQVksRUFDYjtFQTFESDtJR0xNLDJDRG5DUztJQ29DVCxxQ0QxQmlCO0lDMkJqQixlRDNCaUI7SUM0QmpCLHNCQUFxQixFQUN0QjtFSENMO0lHT00sMEJEL0NTO0lDZ0RULHNCRHRDaUI7SUN1Q2pCLGVEdkNpQjtJQ3dDakIsc0JBQXFCLEVBQ3RCO0VIWEw7SUdlSSxvQkFBbUI7SUFDbkIsWUFBVyxFQUNaO0VDMURIO0VBQ0UsZUFBYyxFQUNmIiwiZmlsZSI6InNyYy9hcHAvYXV0aC9yZWNvdmVyLXBhc3N3b3JkL2NvbXBvbmVudHMvcmVjb3Zlci1wYXNzd29yZC1wYWdlL3N0eWxlcy9hdXRoLXJlY292ZXItcGFzc3dvcmQtcGFnZS5zdHlsZXMuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgJy4uLy4uL19zaGFyZWQnO1xuXG4uYXV0aC1wYWdlIHtcbiAgbWluLWhlaWdodDogY2FsYygxMDB2aCAtICN7ICRuYXZiYXItaGVpZ2h0IH0pO1xuICBwYWRkaW5nLWJvdHRvbTogNnJlbTtcbiAgLy8gSGFsZiBzY3JlZW4gYmFja2dyb3VuZCBpbWFnZVxuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy9hc3NldHMvaW1ncy9ob21lL2N0YS1iZy5wbmcnKTtcblxuICBAaW5jbHVkZSBtZWRpYS1icmVha3BvaW50LW9ubHkoeGwpIHtcbiAgICAvLyBjb2wteGwtNiA9PiBsZWZ0IDUwdncgKCsgY29sLTEgdG8gZ2l2ZSBzb21lIGJsYW5rIHNwYWNlKSA9PiAoNyoxMDApLzEyID0gNTguMzN2d1xuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGxlZnQgNTguMzN2dyB0b3AgMHB4O1xuICB9XG5cbiAgQGluY2x1ZGUgbWVkaWEtYnJlYWtwb2ludC1vbmx5KGxnKSB7XG4gICAgLy8gY29sLWxnLTcgPT4gbGVmdCA1OC4zM3Z3ICgrIGNvbC0xIHRvIGdpdmUgc29tZSBibGFuayBzcGFjZSkgPT4gKDgqMTAwKS8xMiA9IDY2LjY2dndcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBsZWZ0IDY2LjY2dncgdG9wIDBweDtcbiAgfVxuXG4gIEBpbmNsdWRlIG1lZGlhLWJyZWFrcG9pbnQtZG93bihtZCkge1xuICAgIGJhY2tncm91bmQ6IG5vbmU7XG4gIH1cbn0vLyAuYXV0aC1wYWdlXG5cbi5hdXRoLW1vZGFsIHtcbiAgLmF1dGgtZm9ybS13cmFwcGVyIHtcbiAgICAuYXV0aC10aXRsZSB7XG4gICAgICBwYWRkaW5nOiAwO1xuICAgICAgbWFyZ2luOiAwO1xuICAgICAgZm9udC1zaXplOiAxLjRyZW07XG4gICAgfVxuICB9XG5cbiAgLm1vZGFsLWhlYWRlciB7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcblxuICAgIC5jbG9zZSB7XG4gICAgICBmb250LXNpemU6IDEuOHJlbTtcbiAgICB9XG4gIH1cbn0vLyAuYXV0aC1tb2RhbFxuXG4uYXV0aC1mb3JtLXdyYXBwZXIge1xuICAuYXV0aC10aXRsZSB7XG4gICAgcGFkZGluZy10b3A6IDJyZW07XG4gICAgbWFyZ2luLWJvdHRvbTogMnJlbTtcbiAgICBjb2xvcjogJGJsYWNrO1xuICAgIGZvbnQtc2l6ZTogMS44cmVtO1xuICAgIGZvbnQtd2VpZ2h0OiA5MDA7XG4gICAgbGV0dGVyLXNwYWNpbmc6IDAuMjVyZW07XG4gIH1cblxuICAuYXV0aC1hbHQtb3B0aW9ucyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gICAgZmxleC1kaXJlY3Rpb246IHJvdy1yZXZlcnNlO1xuXG4gICAgLnNlY29uZGFyeS1jYWxsLXRvLWFjdGlvbi1idG4ge1xuICAgICAgQGluY2x1ZGUgbGluay1idXR0b24oJHB1cnBsZSk7XG4gICAgfVxuXG4gICAgQGluY2x1ZGUgbWVkaWEtYnJlYWtwb2ludC1kb3duKHhzKSB7XG4gICAgICBmbGV4LXdyYXA6IHdyYXA7XG5cbiAgICAgIC5zZWNvbmRhcnktY2FsbC10by1hY3Rpb24tYnRuIHtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIG1hcmdpbi1ib3R0b206IDFyZW07XG4gICAgICB9XG4gICAgfVxuICB9XG5cbiAgLmF1dGgtZm9ybS1kaXZpZGVyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgbWFyZ2luLXRvcDogMnJlbTtcbiAgICBtYXJnaW4tYm90dG9tOiAycmVtO1xuXG4gICAgLy8gTGluZSBkZWNvcmF0aW9uXG4gICAgJjo6YmVmb3JlLFxuICAgICY6OmFmdGVyIHtcbiAgICAgIGNvbnRlbnQ6ICcnO1xuICAgICAgYmFja2dyb3VuZDogJGdyZXk7XG4gICAgICBoZWlnaHQ6IDJweDtcbiAgICAgIGZsZXg6IDEgMSBhdXRvO1xuICAgIH1cblxuICAgIC5kaXZpZGVyLXRleHQge1xuICAgICAgY29sb3I6ICRibGFjaztcbiAgICAgIGZvbnQtc2l6ZTogMS4ycmVtO1xuICAgICAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgICAgIGxldHRlci1zcGFjaW5nOiAwLjJyZW07XG4gICAgICBtYXJnaW46IDBweDtcbiAgICAgIHBhZGRpbmc6IDBweCAxcmVtO1xuICAgIH1cbiAgfVxuXG4gIC5zb2NpYWwtYWx0ZXJuYXRpdmUtYnRuIHtcbiAgICBAaW5jbHVkZSBvdXRsaW5lLWJ1dHRvbigkd2hpdGUsICRmYWNlYm9vay1ibHVlLCAkZmFjZWJvb2stYmx1ZSk7XG4gICAgaGVpZ2h0OiA0cmVtO1xuICB9XG59Ly8gLmF1dGgtZm9ybS13cmFwcGVyXG4iLCIvLyBCcmVha3BvaW50IHZpZXdwb3J0IHNpemVzIGFuZCBtZWRpYSBxdWVyaWVzLlxuLy9cbi8vIEJyZWFrcG9pbnRzIGFyZSBkZWZpbmVkIGFzIGEgbWFwIG9mIChuYW1lOiBtaW5pbXVtIHdpZHRoKSwgb3JkZXIgZnJvbSBzbWFsbCB0byBsYXJnZTpcbi8vXG4vLyAgICAoeHM6IDAsIHNtOiA1NzZweCwgbWQ6IDc2OHB4LCBsZzogOTkycHgsIHhsOiAxMjAwcHgpXG4vL1xuLy8gVGhlIG1hcCBkZWZpbmVkIGluIHRoZSBgJGdyaWQtYnJlYWtwb2ludHNgIGdsb2JhbCB2YXJpYWJsZSBpcyB1c2VkIGFzIHRoZSBgJGJyZWFrcG9pbnRzYCBhcmd1bWVudCBieSBkZWZhdWx0LlxuXG4vLyBOYW1lIG9mIHRoZSBuZXh0IGJyZWFrcG9pbnQsIG9yIG51bGwgZm9yIHRoZSBsYXN0IGJyZWFrcG9pbnQuXG4vL1xuLy8gICAgPj4gYnJlYWtwb2ludC1uZXh0KHNtKVxuLy8gICAgbWRcbi8vICAgID4+IGJyZWFrcG9pbnQtbmV4dChzbSwgKHhzOiAwLCBzbTogNTc2cHgsIG1kOiA3NjhweCwgbGc6IDk5MnB4LCB4bDogMTIwMHB4KSlcbi8vICAgIG1kXG4vLyAgICA+PiBicmVha3BvaW50LW5leHQoc20sICRicmVha3BvaW50LW5hbWVzOiAoeHMgc20gbWQgbGcgeGwpKVxuLy8gICAgbWRcbkBmdW5jdGlvbiBicmVha3BvaW50LW5leHQoJG5hbWUsICRicmVha3BvaW50czogJGdyaWQtYnJlYWtwb2ludHMsICRicmVha3BvaW50LW5hbWVzOiBtYXAta2V5cygkYnJlYWtwb2ludHMpKSB7XG4gICRuOiBpbmRleCgkYnJlYWtwb2ludC1uYW1lcywgJG5hbWUpO1xuICBAcmV0dXJuIGlmKCRuIDwgbGVuZ3RoKCRicmVha3BvaW50LW5hbWVzKSwgbnRoKCRicmVha3BvaW50LW5hbWVzLCAkbiArIDEpLCBudWxsKTtcbn1cblxuLy8gTWluaW11bSBicmVha3BvaW50IHdpZHRoLiBOdWxsIGZvciB0aGUgc21hbGxlc3QgKGZpcnN0KSBicmVha3BvaW50LlxuLy9cbi8vICAgID4+IGJyZWFrcG9pbnQtbWluKHNtLCAoeHM6IDAsIHNtOiA1NzZweCwgbWQ6IDc2OHB4LCBsZzogOTkycHgsIHhsOiAxMjAwcHgpKVxuLy8gICAgNTc2cHhcbkBmdW5jdGlvbiBicmVha3BvaW50LW1pbigkbmFtZSwgJGJyZWFrcG9pbnRzOiAkZ3JpZC1icmVha3BvaW50cykge1xuICAkbWluOiBtYXAtZ2V0KCRicmVha3BvaW50cywgJG5hbWUpO1xuICBAcmV0dXJuIGlmKCRtaW4gIT0gMCwgJG1pbiwgbnVsbCk7XG59XG5cbi8vIE1heGltdW0gYnJlYWtwb2ludCB3aWR0aC4gTnVsbCBmb3IgdGhlIGxhcmdlc3QgKGxhc3QpIGJyZWFrcG9pbnQuXG4vLyBUaGUgbWF4aW11bSB2YWx1ZSBpcyBjYWxjdWxhdGVkIGFzIHRoZSBtaW5pbXVtIG9mIHRoZSBuZXh0IG9uZSBsZXNzIDAuMDJweFxuLy8gdG8gd29yayBhcm91bmQgdGhlIGxpbWl0YXRpb25zIG9mIGBtaW4tYCBhbmQgYG1heC1gIHByZWZpeGVzIGFuZCB2aWV3cG9ydHMgd2l0aCBmcmFjdGlvbmFsIHdpZHRocy5cbi8vIFNlZSBodHRwczovL3d3dy53My5vcmcvVFIvbWVkaWFxdWVyaWVzLTQvI21xLW1pbi1tYXhcbi8vIFVzZXMgMC4wMnB4IHJhdGhlciB0aGFuIDAuMDFweCB0byB3b3JrIGFyb3VuZCBhIGN1cnJlbnQgcm91bmRpbmcgYnVnIGluIFNhZmFyaS5cbi8vIFNlZSBodHRwczovL2J1Z3Mud2Via2l0Lm9yZy9zaG93X2J1Zy5jZ2k/aWQ9MTc4MjYxXG4vL1xuLy8gICAgPj4gYnJlYWtwb2ludC1tYXgoc20sICh4czogMCwgc206IDU3NnB4LCBtZDogNzY4cHgsIGxnOiA5OTJweCwgeGw6IDEyMDBweCkpXG4vLyAgICA3NjcuOThweFxuQGZ1bmN0aW9uIGJyZWFrcG9pbnQtbWF4KCRuYW1lLCAkYnJlYWtwb2ludHM6ICRncmlkLWJyZWFrcG9pbnRzKSB7XG4gICRuZXh0OiBicmVha3BvaW50LW5leHQoJG5hbWUsICRicmVha3BvaW50cyk7XG4gIEByZXR1cm4gaWYoJG5leHQsIGJyZWFrcG9pbnQtbWluKCRuZXh0LCAkYnJlYWtwb2ludHMpIC0gLjAycHgsIG51bGwpO1xufVxuXG4vLyBSZXR1cm5zIGEgYmxhbmsgc3RyaW5nIGlmIHNtYWxsZXN0IGJyZWFrcG9pbnQsIG90aGVyd2lzZSByZXR1cm5zIHRoZSBuYW1lIHdpdGggYSBkYXNoIGluIGZyb250LlxuLy8gVXNlZnVsIGZvciBtYWtpbmcgcmVzcG9uc2l2ZSB1dGlsaXRpZXMuXG4vL1xuLy8gICAgPj4gYnJlYWtwb2ludC1pbmZpeCh4cywgKHhzOiAwLCBzbTogNTc2cHgsIG1kOiA3NjhweCwgbGc6IDk5MnB4LCB4bDogMTIwMHB4KSlcbi8vICAgIFwiXCIgIChSZXR1cm5zIGEgYmxhbmsgc3RyaW5nKVxuLy8gICAgPj4gYnJlYWtwb2ludC1pbmZpeChzbSwgKHhzOiAwLCBzbTogNTc2cHgsIG1kOiA3NjhweCwgbGc6IDk5MnB4LCB4bDogMTIwMHB4KSlcbi8vICAgIFwiLXNtXCJcbkBmdW5jdGlvbiBicmVha3BvaW50LWluZml4KCRuYW1lLCAkYnJlYWtwb2ludHM6ICRncmlkLWJyZWFrcG9pbnRzKSB7XG4gIEByZXR1cm4gaWYoYnJlYWtwb2ludC1taW4oJG5hbWUsICRicmVha3BvaW50cykgPT0gbnVsbCwgXCJcIiwgXCItI3skbmFtZX1cIik7XG59XG5cbi8vIE1lZGlhIG9mIGF0IGxlYXN0IHRoZSBtaW5pbXVtIGJyZWFrcG9pbnQgd2lkdGguIE5vIHF1ZXJ5IGZvciB0aGUgc21hbGxlc3QgYnJlYWtwb2ludC5cbi8vIE1ha2VzIHRoZSBAY29udGVudCBhcHBseSB0byB0aGUgZ2l2ZW4gYnJlYWtwb2ludCBhbmQgd2lkZXIuXG5AbWl4aW4gbWVkaWEtYnJlYWtwb2ludC11cCgkbmFtZSwgJGJyZWFrcG9pbnRzOiAkZ3JpZC1icmVha3BvaW50cykge1xuICAkbWluOiBicmVha3BvaW50LW1pbigkbmFtZSwgJGJyZWFrcG9pbnRzKTtcbiAgQGlmICRtaW4ge1xuICAgIEBtZWRpYSAobWluLXdpZHRoOiAkbWluKSB7XG4gICAgICBAY29udGVudDtcbiAgICB9XG4gIH0gQGVsc2Uge1xuICAgIEBjb250ZW50O1xuICB9XG59XG5cbi8vIE1lZGlhIG9mIGF0IG1vc3QgdGhlIG1heGltdW0gYnJlYWtwb2ludCB3aWR0aC4gTm8gcXVlcnkgZm9yIHRoZSBsYXJnZXN0IGJyZWFrcG9pbnQuXG4vLyBNYWtlcyB0aGUgQGNvbnRlbnQgYXBwbHkgdG8gdGhlIGdpdmVuIGJyZWFrcG9pbnQgYW5kIG5hcnJvd2VyLlxuQG1peGluIG1lZGlhLWJyZWFrcG9pbnQtZG93bigkbmFtZSwgJGJyZWFrcG9pbnRzOiAkZ3JpZC1icmVha3BvaW50cykge1xuICAkbWF4OiBicmVha3BvaW50LW1heCgkbmFtZSwgJGJyZWFrcG9pbnRzKTtcbiAgQGlmICRtYXgge1xuICAgIEBtZWRpYSAobWF4LXdpZHRoOiAkbWF4KSB7XG4gICAgICBAY29udGVudDtcbiAgICB9XG4gIH0gQGVsc2Uge1xuICAgIEBjb250ZW50O1xuICB9XG59XG5cbi8vIE1lZGlhIHRoYXQgc3BhbnMgbXVsdGlwbGUgYnJlYWtwb2ludCB3aWR0aHMuXG4vLyBNYWtlcyB0aGUgQGNvbnRlbnQgYXBwbHkgYmV0d2VlbiB0aGUgbWluIGFuZCBtYXggYnJlYWtwb2ludHNcbkBtaXhpbiBtZWRpYS1icmVha3BvaW50LWJldHdlZW4oJGxvd2VyLCAkdXBwZXIsICRicmVha3BvaW50czogJGdyaWQtYnJlYWtwb2ludHMpIHtcbiAgJG1pbjogYnJlYWtwb2ludC1taW4oJGxvd2VyLCAkYnJlYWtwb2ludHMpO1xuICAkbWF4OiBicmVha3BvaW50LW1heCgkdXBwZXIsICRicmVha3BvaW50cyk7XG5cbiAgQGlmICRtaW4gIT0gbnVsbCBhbmQgJG1heCAhPSBudWxsIHtcbiAgICBAbWVkaWEgKG1pbi13aWR0aDogJG1pbikgYW5kIChtYXgtd2lkdGg6ICRtYXgpIHtcbiAgICAgIEBjb250ZW50O1xuICAgIH1cbiAgfSBAZWxzZSBpZiAkbWF4ID09IG51bGwge1xuICAgIEBpbmNsdWRlIG1lZGlhLWJyZWFrcG9pbnQtdXAoJGxvd2VyLCAkYnJlYWtwb2ludHMpIHtcbiAgICAgIEBjb250ZW50O1xuICAgIH1cbiAgfSBAZWxzZSBpZiAkbWluID09IG51bGwge1xuICAgIEBpbmNsdWRlIG1lZGlhLWJyZWFrcG9pbnQtZG93bigkdXBwZXIsICRicmVha3BvaW50cykge1xuICAgICAgQGNvbnRlbnQ7XG4gICAgfVxuICB9XG59XG5cbi8vIE1lZGlhIGJldHdlZW4gdGhlIGJyZWFrcG9pbnQncyBtaW5pbXVtIGFuZCBtYXhpbXVtIHdpZHRocy5cbi8vIE5vIG1pbmltdW0gZm9yIHRoZSBzbWFsbGVzdCBicmVha3BvaW50LCBhbmQgbm8gbWF4aW11bSBmb3IgdGhlIGxhcmdlc3Qgb25lLlxuLy8gTWFrZXMgdGhlIEBjb250ZW50IGFwcGx5IG9ubHkgdG8gdGhlIGdpdmVuIGJyZWFrcG9pbnQsIG5vdCB2aWV3cG9ydHMgYW55IHdpZGVyIG9yIG5hcnJvd2VyLlxuQG1peGluIG1lZGlhLWJyZWFrcG9pbnQtb25seSgkbmFtZSwgJGJyZWFrcG9pbnRzOiAkZ3JpZC1icmVha3BvaW50cykge1xuICAkbWluOiBicmVha3BvaW50LW1pbigkbmFtZSwgJGJyZWFrcG9pbnRzKTtcbiAgJG1heDogYnJlYWtwb2ludC1tYXgoJG5hbWUsICRicmVha3BvaW50cyk7XG5cbiAgQGlmICRtaW4gIT0gbnVsbCBhbmQgJG1heCAhPSBudWxsIHtcbiAgICBAbWVkaWEgKG1pbi13aWR0aDogJG1pbikgYW5kIChtYXgtd2lkdGg6ICRtYXgpIHtcbiAgICAgIEBjb250ZW50O1xuICAgIH1cbiAgfSBAZWxzZSBpZiAkbWF4ID09IG51bGwge1xuICAgIEBpbmNsdWRlIG1lZGlhLWJyZWFrcG9pbnQtdXAoJG5hbWUsICRicmVha3BvaW50cykge1xuICAgICAgQGNvbnRlbnQ7XG4gICAgfVxuICB9IEBlbHNlIGlmICRtaW4gPT0gbnVsbCB7XG4gICAgQGluY2x1ZGUgbWVkaWEtYnJlYWtwb2ludC1kb3duKCRuYW1lLCAkYnJlYWtwb2ludHMpIHtcbiAgICAgIEBjb250ZW50O1xuICAgIH1cbiAgfVxufVxuIiwiLy8gQ29sb3JzXG4kYmxhY2s6ICMxZTFlMWU7XG4kZGFya2dyZXk6ICMzZjNmM2Y7XG4kd2hpdGU6ICNGRkZGRkY7XG4kZ3JleTogIzllOWU5ZTtcbiRncmV5LTI6ICNkN2Q3ZDc7XG4kZ3JleS0zOiAjZTVlNWU1O1xuXG4kYXF1YW1hcmluYTogIzUwZTNjMjtcbiRwdXJwbGU6ICM5MDEzZmU7XG4kY2hlcnJ5OiAjZjgyYzUxO1xuJHJlZDogI2Q2MTgzYTtcbiRnb2xkOiAjZmNiMzAwO1xuJGZhY2Vib29rLWJsdWU6ICMzYjU5OTg7XG5cbi8vIFNpemVzXG4kbmF2YmFyLWhlaWdodDogJG5hdi1saW5rLWhlaWdodCArICRuYXYtbGluay1wYWRkaW5nLXkgKiAyO1xuXG4vLyBQcmVsb2FkIEltYWdlIC8gQmFja2dyb3VuZCBJbWFnZVxuJHByZWxvYWQtaW1hZ2UtYmc6IHJnYmEoZGFya2VuKCR3aGl0ZSwgMTApLCAuMjUpO1xuXG4vLyBQcmVsb2FkIEltYWdlIC8gQmFja2dyb3VuZCBJbWFnZVxuJHNwaW5uZXItc2l6ZTogMjhweDtcbiRzcGlubmVyLWNvbG9yOiAkZ3JleTtcbiIsIkBtaXhpbiBsaW5rLWJ1dHRvbigkY29sb3IsICRob3Zlci1jb2xvcjogZGFya2VuKCRjb2xvciwgMTAlKSkge1xuICBjb2xvcjogJGNvbG9yO1xuICBmb250LXNpemU6IDFyZW07XG4gIGZvbnQtd2VpZ2h0OiA1MDA7XG4gIGxldHRlci1zcGFjaW5nOiAwLjFyZW07XG4gIHRyYW5zaXRpb246IGNvbG9yIC41cztcblxuICAmOmhvdmVyLFxuICAmOmFjdGl2ZSxcbiAgJi5hY3RpdmUsXG4gICY6Zm9jdXMsXG4gICYuZm9jdXMge1xuICAgICY6bm90KFtkaXNhYmxlZF0pIHtcbiAgICAgIGNvbG9yOiAkaG92ZXItY29sb3I7XG4gICAgfVxuICB9XG5cbiAgJltkaXNhYmxlZF0ge1xuICAgIGN1cnNvcjogbm90LWFsbG93ZWQ7XG4gICAgb3BhY2l0eTogLjU7XG4gIH1cbn1cblxuQG1peGluIG91dGxpbmUtYnV0dG9uKCRjb2xvciwgJGJhY2tncm91bmQsICRib3JkZXIsICRob3Zlci1jb2xvcjogJGJhY2tncm91bmQsICRob3Zlci1iYWNrZ3JvdW5kOiAkY29sb3IpIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogJGJhY2tncm91bmQ7XG4gIGNvbG9yOiAkY29sb3I7XG4gIGJvcmRlci1zdHlsZTogc29saWQ7XG4gIGJvcmRlci13aWR0aDogMnB4O1xuICBib3JkZXItY29sb3I6ICRib3JkZXI7XG4gIGJvcmRlci1yYWRpdXM6IDBweDtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBmb250LXNpemU6IDEuMnJlbTtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgbGV0dGVyLXNwYWNpbmc6IDAuMTJyZW07XG4gIHRyYW5zaXRpb246IGJvcmRlci1jb2xvciAuNXMsIGNvbG9yIC41cywgYmFja2dyb3VuZC1jb2xvciAuNXM7XG5cbiAgJjpob3ZlciB7XG4gICAgJjpub3QoW2Rpc2FibGVkXSkge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgkaG92ZXItYmFja2dyb3VuZCwgLjcpO1xuICAgICAgYm9yZGVyLWNvbG9yOiByZ2JhKCRib3JkZXIsIC43KTtcbiAgICAgIGNvbG9yOiAkaG92ZXItY29sb3I7XG4gICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgfVxuICB9XG5cbiAgJjphY3RpdmUsXG4gICYuYWN0aXZlLFxuICAmOmZvY3VzLFxuICAmLmZvY3VzIHtcbiAgICAmOm5vdChbZGlzYWJsZWRdKSB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkaG92ZXItYmFja2dyb3VuZDtcbiAgICAgIGJvcmRlci1jb2xvcjogJGJvcmRlcjtcbiAgICAgIGNvbG9yOiAkaG92ZXItY29sb3I7XG4gICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgfVxuICB9XG5cbiAgJltkaXNhYmxlZF0ge1xuICAgIGN1cnNvcjogbm90LWFsbG93ZWQ7XG4gICAgb3BhY2l0eTogLjU7XG4gIH1cbn1cblxuQG1peGluIGZpbGwtYnV0dG9uKCRjb2xvciwgJGJhY2tncm91bmQsICRob3Zlci1jb2xvcjogJGNvbG9yLCAkaG92ZXItYmFja2dyb3VuZDogZGFya2VuKCRiYWNrZ3JvdW5kLCA1JSkpIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogJGJhY2tncm91bmQ7XG4gIGNvbG9yOiAkY29sb3I7XG4gIGJvcmRlcjogMnB4IHNvbGlkIHRyYW5zcGFyZW50O1xuICBib3JkZXItcmFkaXVzOiAwcHg7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgZm9udC1zaXplOiAxLjJyZW07XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGxldHRlci1zcGFjaW5nOiAwLjEycmVtO1xuICB0cmFuc2l0aW9uOiBjb2xvciAuNXMsIGJhY2tncm91bmQtY29sb3IgLjVzO1xuXG4gICY6aG92ZXIge1xuICAgICY6bm90KFtkaXNhYmxlZF0pIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoJGhvdmVyLWJhY2tncm91bmQsIC43KTtcbiAgICAgIGNvbG9yOiAkaG92ZXItY29sb3I7XG4gICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgfVxuICB9XG5cbiAgJjphY3RpdmUsXG4gICYuYWN0aXZlLFxuICAmOmZvY3VzLFxuICAmLmZvY3VzIHtcbiAgICAmOm5vdChbZGlzYWJsZWRdKSB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkaG92ZXItYmFja2dyb3VuZDtcbiAgICAgIGNvbG9yOiAkaG92ZXItY29sb3I7XG4gICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgfVxuICB9XG5cbiAgJltkaXNhYmxlZF0ge1xuICAgIGN1cnNvcjogbm90LWFsbG93ZWQ7XG4gICAgb3BhY2l0eTogLjU7XG4gIH1cbn1cbiIsIkBpbXBvcnQgJy4uLy4uLy4uLy4uLy4uL3N0eWxlcy9jb21tb24vYXV0aC9hdXRoLXBhZ2VzLnN0eWxlcyc7XG5cbmFwcC1hdXRoLXJlY292ZXItcGFzc3dvcmQtcGFnZSB7XG4gIGRpc3BsYXk6IGJsb2NrO1xufVxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/auth/recover-password/resolvers/auth-recover-password-page.resolver.ts":
+/*!****************************************************************************************!*\
+  !*** ./src/app/auth/recover-password/resolvers/auth-recover-password-page.resolver.ts ***!
+  \****************************************************************************************/
+/*! exports provided: AuthRecoverPasswordPageResolver */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthRecoverPasswordPageResolver", function() { return AuthRecoverPasswordPageResolver; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var AuthRecoverPasswordPageResolver = /** @class */ (function () {
+    function AuthRecoverPasswordPageResolver() {
+    }
+    AuthRecoverPasswordPageResolver.prototype.resolve = function () {
+        return new Promise(function (resolve, reject) {
+            return resolve({
+                seo: {
+                    title: 'Recover your password',
+                    description: '',
+                    keywords: '',
+                    image_url: ''
+                }
+            });
+        });
+    };
+    AuthRecoverPasswordPageResolver = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
+    ], AuthRecoverPasswordPageResolver);
+    return AuthRecoverPasswordPageResolver;
+}());
+
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=auth-recover-password-auth-recover-password-module.js.map
